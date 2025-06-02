@@ -25,13 +25,18 @@
         android:inputType="text"
         android:minHeight="48dp" />
 
-
-
     <!--    TODO 4: Create XML button object that binds to the btnSubmitMedia instance in AddMediaActivity-->
     <!--    Make sure to abide by the constraints outlined by LinearLayout when setting the layout width and height -->
     <!--    NOTE: You have some flexibility in regards to the placement of the button from UI perspective. It does have to match the exact positioning shown the video -->
     <!--    Functionality must be maintained. -->
 
-    <!--FIXME-->
+    <Button
+        android:id="@+id/btnSubmitMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Add Media"
+        android:textSize="16sp" />
 
 </LinearLayout>

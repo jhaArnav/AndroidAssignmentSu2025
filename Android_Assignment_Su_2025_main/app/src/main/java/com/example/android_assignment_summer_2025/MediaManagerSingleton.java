@@ -20,7 +20,10 @@ public class MediaManagerSingleton {
 
     // TODO 2: Implement addMedia functionality
     // HINT: look at the data structure type!
-    // FIXME
+    public void addMedia(Media media) {
+        content.add(media);
+    }
+
     public List<Media> getContent() {
         return content;
     }

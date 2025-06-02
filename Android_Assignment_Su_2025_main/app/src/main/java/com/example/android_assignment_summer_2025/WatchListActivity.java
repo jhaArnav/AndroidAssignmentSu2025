@@ -28,7 +28,7 @@ public class WatchListActivity extends AppCompatActivity {
 
 
         // TODO 1: Set content view to activity_watchlist.xml file
-       // FIXME
+        setContentView(R.layout.activity_watchlist);
 
 
         // DO NOT MODIFY
@@ -42,18 +42,20 @@ public class WatchListActivity extends AppCompatActivity {
         });
         FloatingActionButton btnAddMedia = findViewById(R.id.fab);
 
-
-
-
-
-
-
         // TODO 3: Program the btnAddMedia to trigger an intent
         //  Intent should switch the activity on screen to AddMediaActivity when btnAddMedia is clicked
-        // FIXME
+        btnAddMedia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WatchListActivity.this, AddMediaActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // TODO 5: Iterate over all the media content in the list and use the addMediaToUI helper method to add the description to the UI
-        // FIXME
+        for (Media media : content) {
+            addMedia(media);
+        }
     }
 
     // DO NOT MODIFY METHOD

@@ -20,7 +20,9 @@ public class AddMediaActivity extends AppCompatActivity {
 
         // TODO 6: Assign respective EditText and button to XML bindings
         // HINT: look at the error messages below to see what you should name the different entities
-        // FIXME
+        Button btnSubmitMedia = findViewById(R.id.btnSubmitMedia);
+        EditText Description = findViewById(R.id.mediaDescription);
+        
         // DO NOT MODIFY
         btnSubmitMedia.setOnClickListener(new View.OnClickListener() {
             @Override
