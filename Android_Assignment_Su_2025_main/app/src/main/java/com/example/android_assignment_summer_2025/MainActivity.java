@@ -1,23 +1,19 @@
 package com.example.android_assignment_summer_2025;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.List;
 
-public class WatchListActivity extends AppCompatActivity {
+
+
+
+public class MainActivity extends AppCompatActivity {
 
     private List<Media> content;
     private LinearLayout mediaContainer;
@@ -47,7 +43,8 @@ public class WatchListActivity extends AppCompatActivity {
         btnAddMedia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WatchListActivity.this, AddMediaActivity.class);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("message", "hello from main activity");
                 startActivity(intent);
             }
         });

@@ -1,16 +1,13 @@
 package com.example.android_assignment_summer_2025;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.List;
 
-public class AddMediaActivity extends AppCompatActivity {
+
+
+public class SecondActivity extends AppCompatActivity {
     private List<Media> content;
 
     @Override
@@ -31,7 +28,13 @@ public class AddMediaActivity extends AppCompatActivity {
                 if (!description.isEmpty()) {
                     Media content = new Media(description);
                     MediaManagerSingleton.getInstance().addMedia(content);
-                    Intent intent = new Intent(AddMediaActivity.this, WatchListActivity.class);
+                    // Get the message from MainActivity and display it
+                    Intent receivedIntent = getIntent();
+                    String message = receivedIntent.getStringExtra("message");
+                    Description.setText(message != null ? message : "hello from main activity");
+                    
+                    // Go back to MainActivity
+                    Intent intent = new Intent(SecondActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
             }
