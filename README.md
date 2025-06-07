@@ -1,6 +1,6 @@
 # AndroidAssignmentSu2025
 
-In this assignment will be completing the implmentation of a basic task list app by filling in 7 different TODOs represting missing parts of a fully functional app.
+In this assignment will be completing the implementation of a basic task list app by filling in 7 different TODOs represting missing parts of a fully functional app.
 
 The app will have two Activities, WatchlistActivity and AddMediaActivity
 
