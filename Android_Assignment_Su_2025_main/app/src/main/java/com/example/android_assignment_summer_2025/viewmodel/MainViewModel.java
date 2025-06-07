@@ -1,5 +1,9 @@
 package com.example.android_assignment_summer_2025.viewmodel;
 
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+
 import com.example.android_assignment_summer_2025.model.CounterModel;
 
 

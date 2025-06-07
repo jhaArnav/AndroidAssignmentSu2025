@@ -2,8 +2,12 @@ package com.example.android_assignment_summer_2025.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.android_assignment_summer_2025.R;
 
 
 public class SecondActivity extends AppCompatActivity {
