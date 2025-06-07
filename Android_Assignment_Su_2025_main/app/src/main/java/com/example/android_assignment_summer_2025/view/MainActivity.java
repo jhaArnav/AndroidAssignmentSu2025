@@ -1,12 +1,22 @@
 package com.example.android_assignment_summer_2025.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.android_assignment_summer_2025.BR;
+import com.example.android_assignment_summer_2025.R;
 import com.example.android_assignment_summer_2025.databinding.ActivityMainBinding;
 import com.example.android_assignment_summer_2025.viewmodel.MainViewModel;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +69,19 @@ public class MainActivity extends AppCompatActivity {
         List<BarEntry> entries = new ArrayList<>();
         entries.add(new BarEntry(0f, viewModel.getCounter().getValue()));
 
-        
+        BarDataSet dataSet = new BarDataSet(entries, "Counter Data");
+        BarChart barChart = findViewById(R.id.barChart);
+        barChart.setData(new BarData(dataSet));
+
+        YAxis rightAxis = barChart.getAxisRight();
+        rightAxis.setEnabled(false);
+        barChart.getDescription().setEnabled(false);
+
+        XAxis xAxis = barChart.getXAxis();
+        xAxis.setDrawAxisLine(false);
+        xAxis.setDrawLabels(false);
+        xAxis.setDrawGridLines(false);
+        barChart.invalidate();
     }
 
     @Override
