@@ -17,4 +17,8 @@ public class CounterModel {
     public void incrementCounter(){
         counter++;
     }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
 } 
